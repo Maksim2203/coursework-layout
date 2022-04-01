@@ -1,3 +1,29 @@
+
+
+let signupBg = document.querySelector('.signup__bg')
+let signupModal = document.querySelector('.signup__moda')
+let openSignup = document.querySelector('.btn__signup')
+let closeSignup = document.querySelector('.signup__navigation-close')
+
+openSignup.addEventListener('click',function(event){
+    event.preventDefault()
+    signupBg.classList.add('active')
+    signupModal.classList.add('active')
+
+})
+closeSignup.addEventListener('click',function(){
+    signupBg.classList.remove('active')
+    signupModal.classList.remove('active')
+})
+
+document.addEventListener('click',function(event){
+    if(event.target === signupBg){
+        signupBg.classList.remove('active')
+        signupModal.classList.remove('active') 
+    }
+})
+
+
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');

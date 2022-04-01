@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delfin group</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/modalBurger.css"> -->
-    <link rel="stylesheet" href="css/signin.css">
+    <link rel="stylesheet" href="css/modalBurger.css">
+    <!-- <link rel="stylesheet" href="css/signin.css"> -->
+    <link rel="stylesheet" href="css/signup.css">
 
 </head>
 
 <body>
-    
+
     <header class="header">
         <div class="header__content">
             <div class="container">
@@ -27,9 +28,9 @@
                         </a>
                     </div>
                     <div class="header__content-btns">
-                        <a href="signin.html"><button class="btn__signin">Войти</button></a>
+                        <button class="btn__signin">Войти</button>
                         <div class="btn__middle">|</div>
-                        <a href="signup.html"><button class="btn__signup">Регистрация</button></a>
+                        <button class="btn__signup">Регистрация</button>
                     </div>
                 </div>
             </div>
@@ -244,7 +245,7 @@
                 <p class="popup__navigation-text">НАВИГАЦИЯ</p>
                 <img src="img/xr.svg" alt="закрыть" class="popup__navigation-close">
             </div>
-           
+
             <div class="popup__info">
                 <p class="popup__info-text">Моторные масла</p>
                 <p class="popup__info-text">Пластиковая тара</p>
@@ -264,16 +265,64 @@
 
         </div>
     </div>
-    <div class="popup__bg">
+    <!-- <div class="signin__bg">
         <div class="signin__modal">
+            <div class="main__line oil"><span class="main__title">Вход</span></div>
             <form action="" class="signin__form">
-
+                <div class="input-control">
+                    <label for="username">Введите имя пользователя *</label>
+                    <input id="username" name="username" type="text" class="input__signup">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password">Введите свой пароль *</label>
+                    <input id="password" name="password" type="password" class="input__signup">
+                    <div class="error"></div>
+                </div>
+                <div class="button">
+                    <button type="submit" class="btn__form">ВОЙТИ</button>
+                </div>
             </form>
 
         </div>
+    </div> -->
+    <div class="signup__bg">
+        <div class="signup__modal">
+            <img src="img/xr.svg" alt="закрыть" class="signup__navigation-close">
+            <div class="main__title">Регистрация</div>
+            <form id="form" action="/">
+                <div class="main__block">
+                    <div class="input-control">
+                        <label for="username">Введите имя пользователя *</label>
+                        <input id="username" name="username" type="text" class="input__signup">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="email">Введите свой E-mail *</label>
+                        <input id="email" name="email" type="text" class="input__signup">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="password">Введите свой пароль *</label>
+                        <input id="password" name="password" type="password" class="input__signup">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="password2">Повторите ввод пароля *</label>
+                        <input id="password2" name="password2" type="password" class="input__signup">
+                        <div class="error"></div>
+                    </div>
+                    <button type="submit" class="btn__form">РЕГИСТРАЦИЯ</button>
+                </div>
+            </form>
+        </div>
+
     </div>
 
+    </div>
 
+    <!-- <script src="js/signin.js"></script> -->
+    <script src="js/signup.js"></script>
     <script src="js/main.js" defer></script>
     <script src="js/modalBurger.js" defer></script>
 </body>

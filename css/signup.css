@@ -1,33 +1,49 @@
-/* 
+
 /* Форма регистрации */
 
-.main__form{
-    width: 100%;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.8);
-}
- .container__form{
-    width: 886px;
-    margin: auto;
-}
-
-.form_width{
+.signup__bg{
+      position: fixed;
+      left: 0;
+      top: 0;
       width: 100%;
-      height: 3px;
-      background-color: #F3B714;
-      margin-top: 55px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      pointer-events: none;
 }
 
-.main__form-title{
-    text-align: center;
-    padding-top: 100px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 56px;
-    color: #01A9D8;
-  
+.signup__modal{
+      position: absolute;
+      right: 50%;
+      bottom: 50%;
+      background: #fdfdfd;
+      width: 600px;
+      height: auto;
+      transition: 1s all;
+      transform: translate(50%,50%);
+      border-radius: 10px;
 }
+
+.signup__navigation-close{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+}
+
+.signup__bg.active{
+      opacity: 1;
+      pointer-events: all;
+      transition: 0.5s all;
+  
+  }
+.signup__modal.active{
+      transform: translate(0%,0%) scale(1);
+      transition: 1s all;
+  
+  }
+
+
+
 #form{
     padding-top: 25px;
 }
@@ -35,7 +51,7 @@
 .btn__form {
       padding: 10px;
       margin-top: 25px;
-      width: 100%;
+      width: 80%;
       background: #262626;
       font-style: normal;
       font-weight: 500;
@@ -43,6 +59,7 @@
       line-height: 28px;
       color: #FFFFFF;
       border: none;
+      
 }
   
 .btn__form:hover{
@@ -54,12 +71,19 @@
       display: flex;
       flex-direction: column;
       padding-top: 20px;
+      margin: auto;
+      
       
   
  }
 
+ .main__title{
+       text-align: center;
+       padding: 10px 0;
+ }
+
 .input__signup{
-    box-shadow: 0 0 10px #8b8b8b;
+    box-shadow: 0 0 2px #8b8b8b;
     margin-top: 15px;
     
 }
@@ -70,7 +94,8 @@
       display: block;
       font-size: 12px;
       padding: 10px;
-      width: 100%;
+      width: 80%;
+      margin: auto;
 }
   
 .input-control input:focus {
@@ -91,10 +116,19 @@
       height: 13px;
 }
 
+
+
 label{
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
       line-height: 23px;
       color: #767676;
+      
 } 
+
+.main__block{
+      margin: auto;
+      border: 1px solid black;
+      width: 80%;
+}
